@@ -459,3 +459,60 @@ h1 .motion-line-inner, h2 .motion-line-inner { display: block; width: fit-conten
   [data-motion-pending], [data-motion-pending] .motion-line-inner { opacity: 1 !important; transform: none !important; clip-path: none !important; }
 }
 .hero h1 .motion-line, .hero h1 .motion-line-inner { color: inherit; white-space: normal; }
+/* Readable type scale across the existing layout. Rems honor browser text sizing. */
+body { font-size: 1rem; }
+.utility-bar, .brand-place { font-size: .75rem; }
+.desktop-nav a, .button, .nav-contact, .hero-text-link, .text-link { font-size: .875rem; }
+.hero-copy > p { font-size: 1.125rem; }
+.hero-copy .hero-description { font-size: 1rem; max-width: 390px; }
+.hero-channel > span, .hero-bottom, .hero-bottom a, .about-photo figcaption { font-size: .8125rem; }
+.hero-channel > span > span { font-size: .9375rem; }
+.hero-caption span:last-child { font-size: .75rem; }
+.about-copy > p, .section-heading p, .milestone-body, .bills-intro > p,
+.territory-copy p, .accountability-layout > div > p, .contact-copy > p { font-size: 1rem; }
+.about-copy > .text-lead { font-size: 1.25rem; }
+.biography-details summary, .bill-benefits summary, .biography-details details p,
+.bill-facts p, .bill-benefits ul, .press-kit-content > p, .contact-offices p,
+.contact-form > p { font-size: .9375rem; }
+.editorial-note, .milestone-date time, .milestone-body > span, .status-label,
+.press-kit-content > a > span, .report-period span, .report p,
+.contact-form > .form-note, .site-footer h2 { font-size: .8125rem; }
+.milestone-date span, .bill-status, .document-pending, .territory-copy .button,
+.territory-facebook, .press-news time, .press-kit-content > a,
+.contact-channel > span, .contact-form label, .contact-form > .form-status,
+.footer-main nav a, .footer-social > a { font-size: .875rem; }
+.bill-facts h4, .press-news > h3, .contact-channel strong { font-size: 1rem; }
+.press-news h4 { font-size: 1.625rem; }
+.press-kit-content > .editorial-note { font-size: .8125rem; }
+.report h3, .contact-offices h3 { font-size: .9375rem; }
+.contact-form input, .contact-form textarea, .contact-form select { font-size: 1rem; }
+.contact-form input::placeholder, .contact-form textarea::placeholder { font-size: .9375rem; }
+.contact-form > .button { font-size: .875rem; }
+.footer-brand > p, .footer-bottom { font-size: .8125rem; }
+
+@media (max-width: 800px) {
+  .utility-inner > span, .brand-place, .mobile-nav nav p { font-size: .75rem; }
+  .mobile-nav > summary, .hero-bottom .page-shell > span, .hero-bottom a { font-size: .8125rem; }
+  .hero-copy > p { font-size: 1rem; max-width: 330px; }
+  .hero-copy .hero-description { font-size: .9375rem; max-width: 340px; }
+  .territory-copy p { font-size: .9375rem; }
+  .territory-copy .button, .press-kit-content > a { font-size: .875rem; }
+}
+
+@media (max-width: 600px) {
+  .utility-inner > span { font-size: .6875rem; }
+  .brand-place { font-size: .75rem; }
+  .hero-copy > p { font-size: 1rem; }
+  .hero-copy .hero-description { font-size: .9375rem; }
+  .hero-actions .button, .hero-text-link { font-size: .875rem; }
+  .hero-bottom .page-shell > span, .hero-bottom a { font-size: .75rem; }
+  .about-photo figcaption, .editorial-note, .milestone-date time,
+  .milestone-date span, .report p { font-size: .75rem; }
+  .about-copy > p, .section-heading p, .milestone-body, .bills-intro > p,
+  .territory-copy p, .contact-copy > p { font-size: .9375rem; }
+  .about-copy > .text-lead { font-size: 1.125rem; }
+  .biography-details summary, .text-link, .report h3,
+  .contact-form > .button, .press-kit-content > a { font-size: .875rem; }
+  .contact-form input::placeholder, .contact-form textarea::placeholder { font-size: .9375rem; }
+  .footer-brand > p, .footer-bottom { font-size: .8125rem; }
+}
