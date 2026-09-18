@@ -8,6 +8,7 @@ import { SocialWorkSection } from "@/components/features/SocialWorkSection";
 import { PressSection } from "@/components/features/PressSection";
 import { AccountabilitySection } from "@/components/features/AccountabilitySection";
 import { CtaSection } from "@/components/features/CtaSection";
+import { ScrollMotion } from "@/components/ui/ScrollMotion";
 
 export const metadata: Metadata = {
   title: {
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      <ScrollMotion />
       <HeroSection />
       <AboutSection />
       <LegislativeSection />
