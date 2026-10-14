@@ -89,6 +89,11 @@ section[id] { scroll-margin-top: 16px; }
 .nav-contact { min-height: 43px; padding: 11px 17px; font-size: 12px; gap: 19px; }
 .nav-contact svg { width: 18px; }
 .mobile-nav { display: none; }
+.mobile-nav > summary { display: flex; align-items: center; gap: 13px; padding: 12px 0 12px 12px; min-height: 46px; font-size: .875rem; font-weight: 700; }
+.mobile-nav nav { position: absolute; top: 100%; left: 0; right: 0; background: white; color: var(--ink); box-shadow: 0 16px 24px #082e2614; border-top: 1px solid var(--line); max-height: calc(100dvh - 127px); overflow-y: auto; padding: 16px 40px 22px; }
+.mobile-nav nav a { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: .875rem; font-weight: 600; }
+.mobile-nav nav a:hover { color: var(--green); }
+.mobile-nav nav p { font-size: .75rem; color: var(--muted); margin-top: 17px; }
 .hero { background: var(--green); color: white; overflow: clip; }
 .hero-layout { display: grid; grid-template-columns: 1.06fr 1fr; min-height: 656px; position: relative; }
 .hero-copy { position: relative; z-index: 2; padding-block: 72px 48px; align-self: center; }
@@ -154,13 +159,26 @@ details[open] > summary .expand-icon::after { transform: rotate(0); }
 .milestone .expand-icon::before,.milestone .expand-icon::after { top: 17px; left: 11px; }
 .milestone-body { padding: 0 80px 32px 259px; font-size: 14px; color: var(--muted); }
 .milestone-body > span { display: block; margin-top: 10px; font-size: 11px; }
+.milestone-body p + p { margin-top: 16px; }
+.biography-flags .text-link { justify-content: space-between; width: 100%; padding-block: 8px; }
 .bills-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 100px; }
 .bills-intro > p { color: var(--muted); margin-top: 22px; max-width: 360px; font-size: 14px; }
 .bills-intro > a { margin-top: 19px; }
 .bills-word { display: block; margin-top: 48px; font-family: var(--font-display); font-size: 76px; line-height: .92; font-weight: 800; letter-spacing: -.02em; color: #d9e8d4; }
 .bill-content { background: #edf3e8; padding: 38px 40px; border-radius: 4px; }
+.bills-list { display: grid; gap: 28px; min-width: 0; }
+.bill-subtitle { margin-bottom: 14px; font-weight: 700; font-size: .9375rem; }
+.bill-description { margin-bottom: 26px; font-size: .9375rem; color: #52664e; }
+.bill-numbers { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 26px 0 0; padding-top: 20px; border-top: 1px solid #c8d8c0; }
+.bill-numbers dt { font-size: .8125rem; color: #52664e; }
+.bill-numbers dd { margin: 6px 0 0; font-size: 1.125rem; font-weight: 700; }
+.bill-benefits > p { padding-bottom: 20px; font-size: .9375rem; color: #52664e; }
+.bill-benefits + .bill-benefits { margin-top: 0; border-top: 0; }
+.bill-progress { margin-top: 24px; }
+.section-pending { margin-top: 24px; color: var(--muted); font-size: .9375rem; }
+.opinion-section { border-top: 1px solid var(--line); }
 .status-label { display: inline-flex; background: #dae9d2; color: #365537; padding: 5px 10px; font-size: 10px; font-weight: 700; }
-.bill-content h3 { font-family: var(--font-display); font-size: 36px; margin: 20px 0 14px; line-height: 1.05; font-weight: 600; }
+.bill-content h3 { font-family: var(--font-display); font-size: 36px; margin: 0 0 14px; line-height: 1.05; font-weight: 600; }
 .bill-status { color: #52664e; font-size: 11px; margin-bottom: 26px; }
 .bill-facts { display: grid; gap: 23px; }
 .bill-facts h4 { font-size: 13px; margin-bottom: 7px; }
@@ -198,6 +216,8 @@ details[open] > summary .expand-icon::after { transform: rotate(0); }
 .press-kit-content > a > svg { width: 18px; }
 .press-kit-content > a:last-of-type > svg { margin-left: auto; }
 .press-kit-content > .editorial-note { margin-bottom: 0; font-size: 10px; }
+.press-kit-content > .press-resource-pending { border-top: 1px solid var(--line); padding-block: 14px; margin: 0; font-size: .875rem; color: var(--ink); font-weight: 700; }
+.press-resource-pending span { display: block; color: var(--muted); font-size: .8125rem; font-weight: 400; }
 .accountability-section { background: #edf3e8; }
 .accountability-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 85px; align-items: center; }
 .accountability-layout h2 { font-size: clamp(40px, 3.6vw, 55px); }
@@ -211,6 +231,8 @@ details[open] > summary .expand-icon::after { transform: rotate(0); }
 .report h3 { font-size: 12px; }
 .report p { font-size: 10px; color: var(--muted); margin-top: 5px; }
 .report > svg { width: 18px; color: #647b60; }
+.report.report-pending { grid-template-columns: 95px 1fr; }
+#tu-voz-cuenta { scroll-margin-top: 146px; }
 .contact-section { background: var(--green); color: white; }
 .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 88px; align-items: center; }
 .contact-copy h2 { font-size: clamp(44px, 4.7vw, 68px); }
@@ -515,4 +537,93 @@ body { font-size: 1rem; }
   .contact-form > .button, .press-kit-content > a { font-size: .875rem; }
   .contact-form input::placeholder, .contact-form textarea::placeholder { font-size: .9375rem; }
   .footer-brand > p, .footer-bottom { font-size: .8125rem; }
+}
+
+/* The full menu is available on desktop as well as mobile. */
+.mobile-nav { display: block; }
+.hero h1.hero-participation-heading { font-size: clamp(48px, 5.3vw, 74px); }
+.hero-participation-heading .motion-line:last-child .motion-line-inner > span { color: var(--yellow); }
+.hero-copy > p, .hero-copy .hero-description { max-width: 460px; }
+.hero-actions { flex-wrap: wrap; }
+
+@media (max-width: 800px) {
+  .hero h1.hero-participation-heading { font-size: 48px; }
+}
+
+@media (max-width: 600px) {
+  .hero h1.hero-participation-heading { font-size: clamp(34px, 10.6vw, 60px); }
+  .hero-copy > p, .hero-copy .hero-description { max-width: 100%; }
+  .hero-actions { gap: 18px; }
+  .hero-text-link { max-width: 130px; }
+  .hero-visual { margin-top: 30px; }
+  .bill-numbers { grid-template-columns: 1fr; gap: 16px; }
+  .report.report-pending { grid-template-columns: 72px 1fr; }
+  #tu-voz-cuenta { scroll-margin-top: 128px; }
+}
+
+/* Municipal participation follows the existing site palette and type system. */
+.municipality-section { background: var(--paper); }
+.municipality-section :focus-visible { outline-color: var(--green-deep); }
+.municipality-selected :focus-visible { outline-color: white; }
+.municipality-heading h2 { max-width: 760px; }
+.municipality-heading .motion-line-inner > span { color: var(--green); }
+.municipality-heading > p { max-width: 350px; margin: 0 0 6px; font-size: 1rem; flex: 0 0 350px; }
+.municipality-layout { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 60px; align-items: center; }
+.municipality-map { min-width: 0; }
+.casanare-map { display: block; width: 100%; height: auto; overflow: visible; }
+.municipality-area { cursor: pointer; outline: none; }
+.municipality-area path { fill: #dcebdd; stroke: #59836a; stroke-width: 1; vector-effect: non-scaling-stroke; transition: fill 180ms ease-out, stroke 180ms ease-out; }
+.municipality-area:hover path { fill: #b5d6bd; stroke: var(--green); }
+.municipality-area.is-selected path { fill: var(--yellow); stroke: var(--green); stroke-width: 1.8; }
+.municipality-area:focus-visible path { stroke: #153e59; stroke-width: 4; }
+.municipality-rivers, .municipality-outline, .municipality-labels { pointer-events: none; }
+.municipality-rivers path { fill: none; stroke: #578d98; stroke-width: 1.2; stroke-dasharray: 4 4; vector-effect: non-scaling-stroke; }
+.municipality-rivers .river-principal { stroke-width: 1.8; }
+.municipality-outline { fill: none; stroke: var(--green); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.municipality-labels circle { fill: var(--green); stroke: var(--paper); stroke-width: 1.5; }
+.municipality-labels .capital-selected { fill: var(--green-deep); stroke: var(--yellow); stroke-width: 2; }
+.municipality-label { fill: #173b2c; font-size: 15px; font-weight: 600; paint-order: stroke; stroke: #dcebdd; stroke-width: 3; stroke-linejoin: round; }
+.municipality-label.label-selected { font-size: 20px; font-weight: 800; stroke: var(--yellow); stroke-width: 5; }
+.municipality-label.label-hovered { font-size: 18px; font-weight: 800; }
+.municipality-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: 22px; color: var(--muted); font-size: .8125rem; }
+.municipality-legend > span { display: inline-flex; align-items: center; gap: 8px; }
+.municipality-legend i { display: inline-block; width: 12px; height: 12px; border: 1px solid #59836a; border-radius: 2px; }
+.legend-municipality { background: #dcebdd; }
+.municipality-legend .legend-selected { background: var(--yellow); border-color: var(--green); }
+.municipality-legend .legend-river { width: 20px; height: 0; border: 0; border-top: 2px dashed #578d98; border-radius: 0; }
+.municipality-attribution { margin-top: 12px; color: var(--muted); font-size: .75rem; line-height: 1.8; }
+.municipality-attribution a { text-decoration: underline; text-underline-offset: 3px; }
+.municipality-attribution a:hover { color: var(--green); }
+.municipality-panel { min-width: 0; }
+.municipality-panel > label { display: block; margin-bottom: 9px; font-size: .875rem; font-weight: 700; }
+.municipality-panel > select { width: 100%; min-height: 51px; border: 1px solid #9aaa9a; border-radius: 5px; padding: 10px 14px; color: var(--ink); background: white; font-size: 1rem; cursor: pointer; }
+.municipality-selected { margin-top: 20px; padding: 28px; border-radius: 5px; background: var(--green); color: white; }
+.municipality-selected h3 { margin-bottom: 15px; font-family: var(--font-display); font-size: 36px; line-height: 1.1; }
+.municipality-selected p { margin-bottom: 24px; color: #d5e8dc; font-size: .9375rem; line-height: 1.8; }
+.municipality-selected .button { width: 100%; justify-content: space-between; gap: 12px; padding-inline: 17px; text-align: left; }
+.municipality-selected .button svg { width: 18px; }
+.municipality-help { margin-top: 16px; color: var(--muted); font-size: .8125rem; }
+
+@media (max-width: 1180px) {
+  .municipality-layout { grid-template-columns: minmax(0, 1fr) 300px; gap: 35px; }
+  .municipality-heading > p { flex-basis: 300px; }
+  .municipality-selected { padding: 24px; }
+}
+
+@media (max-width: 800px) {
+  .municipality-heading { align-items: flex-start; flex-direction: column; gap: 24px; }
+  .municipality-heading > p { max-width: 540px; flex: auto; }
+  .municipality-layout { grid-template-columns: 1fr; gap: 32px; }
+  .municipality-panel { max-width: 540px; width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .municipality-heading h2 { font-size: clamp(38px, 10.5vw, 44px); }
+  .municipality-heading > p { font-size: .9375rem; }
+  .municipality-label { display: none; }
+  .municipality-label.label-selected { display: block; font-size: 32px; stroke-width: 7; }
+  .municipality-labels circle { r: 4; }
+  .municipality-legend { gap: 10px 16px; font-size: .75rem; }
+  .municipality-attribution { font-size: .6875rem; }
+  .municipality-selected h3 { font-size: 32px; }
 }

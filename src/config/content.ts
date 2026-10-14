@@ -1,12 +1,34 @@
-// Content inherited from the initial site, pending source documents and publication.
-export const milestones = [
-  { date: "12 de agosto de 2026", iso: "2026-08-12", category: "Desarrollo regional", title: "Defensa del presupuesto regional para Casanare", summary: "Se logró asegurar recursos vitales para el mantenimiento de vías terciarias en el presupuesto nacional de la vigencia actual." },
-  { date: "25 de julio de 2026", iso: "2026-07-25", category: "Control político", title: "Debate de control político sobre regalías", summary: "Exigimos transparencia en la ejecución de los fondos de regalías destinados a proyectos de alto impacto social en la región de los llanos." },
-  { date: "10 de junio de 2026", iso: "2026-06-10", category: "Medio ambiente", title: "Mesa técnica por el medio ambiente", summary: "Reunión con MinAmbiente para frenar proyectos que amenazan las fuentes hídricas del piedemonte llanero." },
-] as const;
-export const pressItems = [
-  { date: "15 de septiembre de 2026", iso: "2026-09-15", title: "Diego García exige medidas urgentes para el sector agro en Casanare" },
-  { date: "2 de septiembre de 2026", iso: "2026-09-02", title: "Inicia el debate sobre la nueva distribución de regalías" },
-  { date: "20 de agosto de 2026", iso: "2026-08-20", title: "Avanza proyecto de ley en pro de los jóvenes emprendedores" },
+// Legislative priorities supplied in "Colocar logo.docx".
+export const legislativePriorities = [
+  {
+    number: "01",
+    title: "Desarrollo agropecuario y rural",
+    paragraphs: [
+      "La defensa del desarrollo agropecuario y rural es una de nuestras prioridades, porque entendemos que el campo no solo produce alimentos: genera empleo, mueve la economía y representa el sustento de miles de familias.",
+      "Reconocemos el enorme potencial agrícola y ganadero de Casanare y los desafíos que enfrentan nuestros productores para producir, comercializar y obtener una remuneración justa por su trabajo.",
+      "Por eso, desde el Congreso impulsamos iniciativas que fortalezcan la productividad, faciliten el acceso a tecnología, mejoren las oportunidades de comercialización y permitan que trabajar el campo sea cada vez más rentable.",
+      "Porque un campo fuerte significa regiones más fuertes y mayores oportunidades para Colombia.",
+    ],
+  },
+  {
+    number: "02",
+    title: "Desarrollo energético, hidrocarburos y minero",
+    paragraphs: [
+      "Creemos que la riqueza de nuestros recursos naturales debe reflejarse en el bienestar de nuestra gente. El sector minero-energético es un motor fundamental de la economía colombiana, que genera empleo, inversión y recursos para el desarrollo de las regiones.",
+      "Nuestro propósito es que ese potencial se traduzca en mejores vías, hospitales, educación, servicios públicos y mayores oportunidades para las comunidades.",
+      "Por eso, desde el Congreso promovemos una política energética responsable, con reglas claras que incentiven la inversión, garanticen la seguridad energética del país y permitan aprovechar nuestros recursos de manera sostenible, protegiendo el medio ambiente.",
+      "Porque no basta con tener riqueza natural; el verdadero desarrollo está en convertirla en bienestar para nuestra región.",
+    ],
+  },
+  {
+    number: "03",
+    title: "Inversión para los territorios y regiones",
+    paragraphs: [
+      "El desarrollo de Colombia también se construye desde sus regiones. Por eso, trabajamos para que los territorios reciban una inversión más justa, que responda a sus necesidades y genere oportunidades para su gente.",
+      "Casanare y la Orinoquía aportan al crecimiento económico del país, pero aún enfrentan grandes desafíos en infraestructura, salud, educación, vías y servicios públicos.",
+      "Desde el Congreso buscamos que las necesidades de nuestras comunidades sean escuchadas en las decisiones nacionales, promoviendo una distribución más equilibrada de los recursos, articulando soluciones y haciendo seguimiento a los compromisos institucionales.",
+      "Porque las regiones que aportan al desarrollo de Colombia también merecen los recursos y las oportunidades para seguir creciendo.",
+    ],
+  },
 ] as const;
 
