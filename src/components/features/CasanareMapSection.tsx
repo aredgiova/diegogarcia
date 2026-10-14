@@ -109,7 +109,7 @@ export function CasanareMapSection() {
                       <text
                         x={item.id === selectedId ? item.selectedLabel[0] : item.center[0]}
                         y={item.id === selectedId ? item.selectedLabel[1] : item.center[1]}
-                        textAnchor="middle"
+                        textAnchor={item.id === selectedId && item.selectedLabel[0] < 120 ? "start" : "middle"}
                         className={"municipality-label" + (item.id === selectedId ? " label-selected" : "") + (item.id === hoveredId ? " label-hovered" : "")}
                       >
                         {item.name}

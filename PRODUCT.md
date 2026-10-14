@@ -11,7 +11,7 @@ Sitio público de Diego García: perfil, gestión legislativa, proyectos, trabaj
 El usuario solicita mejorar profundamente el frontend sobre la base existente, conservar Next.js y el backend y trabajar en localhost:3000. App Router, React, TypeScript y Tailwind. No migrar ni publicar. La única ruta API presente en este checkout es /api/health; no existe receptor de solicitudes ciudadanas.
 
 ## Brand Commitments
-Nombre Diego García; verde, amarillo y azul presentes en la base. Fotografías reales existentes en public/images. Referencia visual indicada por el usuario: https://www.flaviobolsonaro.com.br/. El usuario autoriza editar fotografías y generar recursos nuevos.
+Nombre Diego García; verde, amarillo y azul presentes en la base. Logo oficial suministrado por el usuario, con «Diego García congresista» y «Hechos + Región», conservado en public/images/diego-garcia-logo.jpg. Tipografía Poppins solicitada por el usuario, con títulos grandes en Bold (700). Fotografías reales existentes en public/images. Referencia visual indicada por el usuario: https://www.flaviobolsonaro.com.br/. El usuario autoriza editar fotografías y generar recursos nuevos.
 
 ## Evidence on Hand
 Biografía y formación: contenido existente en AboutSection. Mensaje «¡Casanare! Aquí estoy para servirte» incorporado en diego_hero_cutout.png, que es un banner aplanado, no un recorte transparente. Tres fotografías originales. logo.png contiene una imagen de energía y no es un logo de Diego. Las noticias, proyectos e informes existentes carecen de documentos y enlaces verificables: preservar como borradores, sin elevar su estado a información comprobada. Redes sociales en src/config/site.ts. No inventar estadísticas, apoyos, logros ni eventos.
