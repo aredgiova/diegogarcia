@@ -9,6 +9,7 @@ export function HeroSection() {
           src="/images/diego-hero-banner.jpg"
           alt="Diego García sonriendo y levantando el pulgar, con escenas de encuentro con la comunidad al fondo"
           fill
+          unoptimized
           sizes="(max-width: 900px) 100vw, (max-width: 1100px) 570px, 660px"
           preload
           className="hero-reference-image"
