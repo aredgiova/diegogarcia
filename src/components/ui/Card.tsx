@@ -43,7 +43,7 @@ export function CardHeader({ children, className }: CardHeaderProps) {
 
 export function CardBody({ children, className }: CardBodyProps) {
   return (
-    <div className={cn("text-neutral-600 dark:text-neutral-400", className)}>
+    <div className={cn("text-muted dark:text-neutral-400", className)}>
       {children}
     </div>
   );

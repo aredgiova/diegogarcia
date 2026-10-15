@@ -25,8 +25,8 @@ export function HeroSection() {
           <p className="hero-reference-lead">Creo en una política cercana a la gente, comprometida con la región y respaldada por hechos.</p>
           <p className="hero-reference-description">Por eso, queremos que este también sea tu espacio. Cuéntanos qué está pasando en tu comunidad, comparte tus ideas y hagamos que las voces de nuestra región lleguen a donde se toman las decisiones.</p>
           <div className="hero-reference-actions">
-            <Link href="/#perfil" className="button hero-reference-primary">Conoce mi historia</Link>
-            <Link href="/#perfil" className="hero-reference-secondary">Conoce mi historia</Link>
+            <Link href="/#casanare" className="button hero-reference-primary">Déjanos tu idea</Link>
+            <Link href="/#proyectos" className="hero-reference-secondary">Iniciativas legislativas</Link>
           </div>
         </div>
       </div>

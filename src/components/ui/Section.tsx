@@ -55,15 +55,15 @@ export function SectionHeader({
       )}
     >
       {badge && (
-        <span className="inline-flex items-center rounded-full bg-brand-50 px-3 py-1 text-sm font-medium text-brand-700 ring-1 ring-inset ring-brand-700/10 dark:bg-brand-950 dark:text-brand-300 dark:ring-brand-400/20 mb-4">
+        <span className="inline-flex items-center rounded-full bg-brand-50 px-3 py-1 text-sm font-medium text-brand-700 ring-1 ring-inset ring-brand-700 dark:bg-brand-950 dark:text-white dark:ring-white/30 mb-4">
           {badge}
         </span>
       )}
-      <h2 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-4xl">
+      <h2 className="text-3xl font-bold tracking-tight text-muted dark:text-neutral-100 sm:text-4xl">
         {title}
       </h2>
       {description && (
-        <p className="mt-4 text-lg text-neutral-600 dark:text-neutral-400 mx-auto max-w-2xl">
+        <p className="mt-4 text-lg text-muted dark:text-neutral-400 mx-auto max-w-2xl">
           {description}
         </p>
       )}

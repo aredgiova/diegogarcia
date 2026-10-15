@@ -66,9 +66,10 @@ export function ContactForm() {
     >
       <h3>Déjame tu idea.</h3>
       <p>
-        Escríbenos a{" "}
-        <span className="contact-email">{siteConfig.contactEmail}</span>.
+        ¿Tienes una solicitud, una propuesta o quieres invitarme a una reunión en
+        tu comunidad? Hagámoslo realidad.
       </p>
+      <p>Solo debes llenar este formulario ¡es muy fácil!</p>
       <div className="form-row">
         <div>
           <label htmlFor="contact-name">Nombre</label>
@@ -136,8 +137,8 @@ export function ContactForm() {
       {currentPreparation && (
         <div className="prepared-message">
           <p className="form-note">
-            Si tu correo no se abre, copia este texto y envíalo a la dirección
-            indicada arriba.
+            Si tu correo no se abre, copia este texto y envíalo a{" "}
+            <span className="contact-email">{siteConfig.contactEmail}</span>.
           </p>
           <label htmlFor="prepared-message">Mensaje preparado</label>
           <textarea

@@ -10,11 +10,12 @@ export function Brand({ light = false }: { light?: boolean }) {
     >
       <span className="brand-image-frame">
         <Image
-          src="/images/diego-garcia-logo.jpg"
+          src={light ? "/images/diego-garcia-logo-footer.png" : "/images/diego-garcia-logo.jpg"}
           alt="Diego García, congresista. Hechos + Región."
-          width={2151}
-          height={1033}
-          sizes="(max-width: 600px) 246px, (max-width: 800px) 246px, (max-width: 1180px) 290px, 330px"
+          width={light ? 1992 : 2151}
+          height={light ? 849 : 1033}
+          sizes={light ? "(max-width: 332px) calc(100vw - 72px), 260px" : "(max-width: 600px) 246px, (max-width: 800px) 246px, (max-width: 1180px) 290px, 330px"}
+          unoptimized={light}
           preload={!light}
           className="brand-logo-image"
         />

@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { siteConfig } from "@/config/site";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingSocialLinks } from "@/components/layout/FloatingSocialLinks";
 import "./globals.css";
 
 const poppins = localFont({
@@ -66,14 +67,14 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#075c43" },
-    { media: "(prefers-color-scheme: dark)", color: "#075c43" },
+    { media: "(prefers-color-scheme: light)", color: "#007562" },
+    { media: "(prefers-color-scheme: dark)", color: "#007562" },
   ],
   width: "device-width",
   initialScale: 1,
 };
 
-const designContract = "\u003c!--\nTHESIS: Una portada cívica centrada en Diego, su historia y la gestión de Casanare.\nOWN-WORLD: Verde #075c43, amarillo #ffcb00, superficies claras, Poppins, titulares Bold (700) y cuerpo Regular (400), planos diagonales y fotografías reales.\nSTORY: Conocer a Diego, explorar gestión y proyectos, consultar prensa y transparencia, contactar al equipo.\nFIRST VIEWPORT: Navegación blanca; titular grande a la izquierda, retrato a la derecha, acción amarilla y franja de contacto. En móvil se apilan.\nFORM: Referencia política elegida por el usuario; prevalece sobre el sorteo a9aea8b0.\nFINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md\n--\u003e";
+const designContract = "\u003c!--\nTHESIS: Una portada cívica centrada en Diego, su historia y la gestión de Casanare.\nOWN-WORLD: Verde #007562, amarillo #ffcb00, superficies claras, Poppins, titulares Bold (700) y cuerpo Regular (400), planos diagonales y fotografías reales.\nSTORY: Conocer a Diego, explorar gestión y proyectos, consultar prensa y transparencia, contactar al equipo.\nFIRST VIEWPORT: Navegación blanca; titular grande a la izquierda, retrato a la derecha, acción amarilla y franja de contacto. En móvil se apilan.\nFORM: Referencia política elegida por el usuario; prevalece sobre el sorteo a9aea8b0.\nFINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md\n--\u003e";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -108,6 +109,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <a href="#contenido" className="skip-link">Saltar al contenido</a><Header />
         <main id="contenido" tabIndex={-1} className="flex-1">{children}</main>
         <Footer />
+        <FloatingSocialLinks />
       </body>
     </html>
   );
