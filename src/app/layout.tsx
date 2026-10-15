@@ -18,6 +18,13 @@ const poppins = localFont({
   display: "swap",
 });
 
+const socialPreviewImage = {
+  url: "/og-hero-20261015.png",
+  width: 1200,
+  height: 630,
+  alt: "Diego García. Tu voz también tiene un lugar en el Congreso.",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
@@ -38,10 +45,8 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: "/og.png",
-        width: 1200,
-        height: 630,
-        alt: siteConfig.name,
+        ...socialPreviewImage,
+        type: "image/png",
       },
     ],
   },
@@ -50,7 +55,7 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     creator: siteConfig.social.twitter,
-    images: ["/og.png"],
+    images: [socialPreviewImage],
   },
   robots: {
     index: true,
