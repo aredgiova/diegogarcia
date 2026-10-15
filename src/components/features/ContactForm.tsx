@@ -8,36 +8,53 @@ import { useMunicipalityParticipation } from "./MunicipalityParticipation";
 
 export function ContactForm() {
   const { municipality, setMunicipality } = useMunicipalityParticipation();
-  const [prepared, setPrepared] = useState("");
-  const [status, setStatus] = useState("");
-  const [preparedMunicipality, setPreparedMunicipality] = useState("");
-  const currentPreparation = preparedMunicipality === municipality;
+  const [prepared, setPrepared] = useState<{
+    body: string;
+    href: string;
+    municipality: string;
+  } | null>(null);
+  const currentPreparation =
+    prepared?.municipality === municipality ? prepared : null;
 
-  async function prepare(event: FormEvent<HTMLFormElement>) {
+  function prepare(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const text =
+    const messageInput = event.currentTarget.elements.namedItem(
+      "message",
+    ) as HTMLTextAreaElement;
+    const message = messageInput.value.trim();
+
+    if (message.length < 10) {
+      messageInput.setCustomValidity(
+        "Escribe un mensaje de al menos 10 caracteres, sin contar los espacios al inicio y al final.",
+      );
+      messageInput.reportValidity();
+      return;
+    }
+
+    const subject = String(data.get("subject"));
+    const body = (
       "Hola, equipo de Diego García.\n\nMi nombre es " +
       String(data.get("name")).trim() +
       " y escribo desde " +
       String(data.get("municipality")).trim() +
       ".\nMotivo: " +
-      data.get("subject") +
+      subject +
       "\n\n" +
-      String(data.get("message")).trim();
-    setPrepared(text);
-    setPreparedMunicipality(municipality);
+      message
+    ).replace(/\r?\n/g, "\r\n");
+    const href =
+      `mailto:${siteConfig.contactEmail}` +
+      `?subject=${encodeURIComponent(`Tu voz cuenta: ${subject}`)}` +
+      `&body=${encodeURIComponent(body)}`;
+    setPrepared({ body, href, municipality });
 
-    try {
-      await navigator.clipboard.writeText(text);
-      setStatus(
-        "Solicitud copiada. Abre Facebook y pégala en un mensaje al equipo. Aún no se ha enviado.",
-      );
-    } catch {
-      setStatus(
-        "Tu solicitud está lista. Copia el texto de abajo y compártelo con el equipo en Facebook. Aún no se ha enviado.",
-      );
-    }
+    const emailLink = document.createElement("a");
+    emailLink.href = href;
+    emailLink.hidden = true;
+    document.body.append(emailLink);
+    emailLink.click();
+    emailLink.remove();
   }
 
   return (
@@ -45,13 +62,13 @@ export function ContactForm() {
       id="tu-voz-cuenta"
       className="contact-form"
       onSubmit={prepare}
-      onChange={() => {
-        setPrepared("");
-        setStatus("");
-      }}
+      onChange={() => setPrepared(null)}
     >
       <h3>Déjame tu idea.</h3>
-      <p>Prepara tu mensaje y compártelo con el equipo por Facebook.</p>
+      <p>
+        Escríbenos a{" "}
+        <span className="contact-email">{siteConfig.contactEmail}</span>.
+      </p>
       <div className="form-row">
         <div>
           <label htmlFor="contact-name">Nombre</label>
@@ -102,34 +119,39 @@ export function ContactForm() {
         required
         minLength={10}
         maxLength={3000}
+        onInput={(event) => event.currentTarget.setCustomValidity("")}
       />
       <p className="form-note">
-        El envío directo aún no está habilitado. Este formulario prepara una copia
-        de tu solicitud; tus datos no se guardan en el sitio.
+        Al continuar se abrirá tu aplicación de correo. Revisa el mensaje y
+        envíalo desde tu cuenta.
       </p>
       <button className="button button-green" type="submit">
-        Preparar y copiar mensaje <Icon />
+        Continuar en mi correo <Icon />
       </button>
       <p className="form-status" role="status">
-        {currentPreparation ? status : ""}
+        {currentPreparation
+          ? "Mensaje preparado. Confirma el envío en tu aplicación de correo."
+          : ""}
       </p>
-      {currentPreparation && prepared && (
+      {currentPreparation && (
         <div className="prepared-message">
-          <label htmlFor="prepared-message">Mensaje listo para compartir</label>
+          <p className="form-note">
+            Si tu correo no se abre, copia este texto y envíalo a la dirección
+            indicada arriba.
+          </p>
+          <label htmlFor="prepared-message">Mensaje preparado</label>
           <textarea
             id="prepared-message"
-            value={prepared}
+            value={currentPreparation.body}
             readOnly
             rows={6}
             onFocus={(event) => event.target.select()}
           />
           <a
             className="text-link"
-            href={siteConfig.social.facebook}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={currentPreparation.href}
           >
-            Abrir Facebook de Diego <Icon />
+            Volver a abrir mi correo <Icon />
           </a>
         </div>
       )}

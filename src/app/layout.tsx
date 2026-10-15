@@ -73,7 +73,7 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-const designContract = "\u003c!--\nTHESIS: Una portada cívica centrada en Diego, su historia y la gestión de Casanare.\nOWN-WORLD: Verde #075c43, amarillo #f4d343, superficies claras, Poppins, titulares Bold (700) y cuerpo Regular (400), planos diagonales y fotografías reales.\nSTORY: Conocer a Diego, explorar gestión y proyectos, consultar prensa y transparencia, contactar al equipo.\nFIRST VIEWPORT: Navegación blanca; titular grande a la izquierda, retrato a la derecha, acción amarilla y franja de contacto. En móvil se apilan.\nFORM: Referencia política elegida por el usuario; prevalece sobre el sorteo a9aea8b0.\nFINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md\n--\u003e";
+const designContract = "\u003c!--\nTHESIS: Una portada cívica centrada en Diego, su historia y la gestión de Casanare.\nOWN-WORLD: Verde #075c43, amarillo #ffcb00, superficies claras, Poppins, titulares Bold (700) y cuerpo Regular (400), planos diagonales y fotografías reales.\nSTORY: Conocer a Diego, explorar gestión y proyectos, consultar prensa y transparencia, contactar al equipo.\nFIRST VIEWPORT: Navegación blanca; titular grande a la izquierda, retrato a la derecha, acción amarilla y franja de contacto. En móvil se apilan.\nFORM: Referencia política elegida por el usuario; prevalece sobre el sorteo a9aea8b0.\nFINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md\n--\u003e";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -86,6 +86,23 @@ export default function RootLayout({ children }: RootLayoutProps) {
       className={poppins.variable}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-MNE94069WH"
+        />
+        <script
+          id="google-tag-init"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-MNE94069WH');
+            `,
+          }}
+        />
+      </head>
       <body className="flex min-h-screen flex-col antialiased">
         <template id="design-contract" dangerouslySetInnerHTML={{ __html: designContract }} />
         <a href="#contenido" className="skip-link">Saltar al contenido</a><Header />

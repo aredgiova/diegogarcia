@@ -1,7 +1,8 @@
 import type { SVGProps } from "react";
-type IconName = "arrow" | "download" | "instagram" | "facebook" | "message";
+type IconName = "arrow" | "download" | "instagram" | "facebook" | "message" | "play";
 const paths: Record<IconName, React.ReactNode> = {
   arrow: <><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></>,
+  play: <path d="m8 5 11 7-11 7z" />,
   download: <><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><path d="m7 10 5 5 5-5M12 15V3" /></>,
   instagram: <><rect width="20" height="20" x="2" y="2" rx="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><path d="M17.5 6.5h.01" /></>,
   facebook: <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />,

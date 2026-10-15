@@ -105,7 +105,7 @@ No se requiere `vercel.json` — Vercel detecta automáticamente Next.js.
 - [ ] Integrar autenticación (NextAuth.js o Auth.js)
 - [ ] Agregar base de datos (PostgreSQL + Prisma) si se requiere
 - [ ] Implementar dashboard/panel administrativo
-- [ ] Integrar analytics
+- [x] Google Analytics: etiqueta `G-MNE94069WH` en el `<head>` global de `src/app/layout.tsx`.
 
 ---
 

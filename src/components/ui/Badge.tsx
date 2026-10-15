@@ -18,7 +18,7 @@ const variantStyles: Record<BadgeVariant, string> = {
   success:
     "bg-emerald-50 text-emerald-700 ring-emerald-200 dark:bg-emerald-950 dark:text-emerald-300 dark:ring-emerald-800",
   warning:
-    "bg-amber-50 text-amber-700 ring-amber-200 dark:bg-amber-950 dark:text-amber-300 dark:ring-amber-800",
+    "bg-political-yellow text-brand-950 ring-political-yellow",
 };
 
 export function Badge({

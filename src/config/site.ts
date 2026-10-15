@@ -6,6 +6,7 @@ export const siteConfig = {
     "Representante a la Cámara por Casanare. Comprometido con el servicio público, el desarrollo regional y la construcción de oportunidades.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://diegogarciaalfonso.com",
   author: "Diego García",
+  contactEmail: "utl-diego.garcia@camara.gov.co",
   keywords: [
     "Diego García",
     "Casanare",
