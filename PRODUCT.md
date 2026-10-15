@@ -23,3 +23,5 @@ Biografía y formación: contenido existente en AboutSection. Mensaje «¡Casana
 - No afirmar que una solicitud se envió si no existe receptor.
 
 Las tres prioridades legislativas se identifican con iconos de agricultura, energía e inversión territorial en lugar de rótulos numéricos. El sitio incluye accesos flotantes a Facebook, Instagram y TikTok, enlazados a las cuentas configuradas en src/config/site.ts; son verticales en escritorio amplio y una fila compacta en pantallas menores, con el verde y amarillo de la marca.
+
+En «Con nuestra gente», las tres previsualizaciones mantienen la proporción 9:16 y sus enlaces a Facebook. En móvil (hasta 700px) se recorren mediante desplazamiento horizontal nativo, con ajuste a cada imagen, parte de la siguiente a la vista y una indicación para deslizar. En escritorio se conservan las tres columnas centradas.

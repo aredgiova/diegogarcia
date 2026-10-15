@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Icon } from "@/components/ui/Icon";
+import { CommunityVideoList } from "@/components/features/CommunityVideoList";
 
 const communityVideos = [
   {
@@ -31,21 +32,20 @@ export function SocialWorkSection() {
             <span className="motion-line"><span className="motion-line-inner">Con nuestra gente</span></span>
           </h2>
           <p>Historias de nuestra gente, encuentros con las comunidades y momentos que reflejan nuestro trabajo en el territorio. Conoce de cerca cómo seguimos recorriendo Casanare, escuchando y trabajando por nuestra región.</p>
-          <ul className="territory-stories" aria-label="Videos de nuestra comunidad">
+          <p className="territory-scroll-hint">Desliza hacia los lados para ver los videos.</p>
+          <CommunityVideoList>
             {communityVideos.map(video => (
               <li key={video.href}>
-                <a href={video.href} target="_blank" rel="noopener noreferrer" className="territory-story">
+                <a href={video.href} target="_blank" rel="noopener noreferrer" className="territory-story" aria-label={`Ver en Facebook: ${video.title}. Se abre en una pestaña nueva.`}>
                   <span className="territory-story-media">
                     <Image src={video.image} alt={video.alt} width={720} height={1280} sizes="(max-width: 700px) 100vw, 33vw" unoptimized />
                     <span className="territory-story-play" aria-hidden="true"><Icon name="play" /></span>
                   </span>
-                  <h3>{video.title}</h3>
                   <span className="territory-story-link">Ver en Facebook <Icon /></span>
-                  <span className="sr-only">Se abre en una pestaña nueva.</span>
                 </a>
               </li>
             ))}
-          </ul>
+          </CommunityVideoList>
         </div>
       </div>
     </section>

@@ -25,9 +25,8 @@ export function PressSection() {
           <div className="press-news">
             <h3>Boletines y comunicados de prensa</h3>
             {pressBulletins.map(bulletin => (
-              <article key={bulletin.id} aria-labelledby={`${bulletin.id}-title`}>
+              <article key={bulletin.id} aria-label={`Comunicado de prensa ${bulletin.code}`}>
                 <time dateTime={bulletin.date}>{bulletin.dateLabel}</time>
-                <h4 id={`${bulletin.id}-title`}>{bulletin.title}</h4>
                 <p className="press-bulletin-meta">Comunicado {bulletin.code} · PDF · {bulletin.pages} {bulletin.pages === 1 ? "página" : "páginas"} · {Math.round(bulletin.bytes / 1024)} KB</p>
                 <div className="press-bulletin-actions">
                   <a href={bulletin.file} className="button button-green" target="_blank" rel="noopener noreferrer" aria-label={`Ver comunicado ${bulletin.code} en PDF, se abre en una pestaña nueva`}>Ver PDF <Icon /></a>
