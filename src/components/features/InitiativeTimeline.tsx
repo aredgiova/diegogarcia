@@ -2,8 +2,8 @@ interface InitiativeTimelineProps {
   initiative: string;
 }
 
-// Decorative placeholders follow the reference; confirmed stages are pending.
-const placeholderMarkers = Array.from({ length: 9 }, (_, index) => index);
+// Filing is confirmed; the remaining stages and dates are still pending.
+const timelineMarkers = Array.from({ length: 4 }, (_, index) => index);
 
 export function InitiativeTimeline({ initiative }: InitiativeTimelineProps) {
   return (
@@ -14,12 +14,12 @@ export function InitiativeTimeline({ initiative }: InitiativeTimelineProps) {
     >
       <h4>Línea de tiempo</h4>
       <div className="bill-timeline-track" aria-hidden="true">
-        {placeholderMarkers.map(marker => (
-          <span className="bill-timeline-marker" key={marker} />
+        {timelineMarkers.map(marker => (
+          <span className={`bill-timeline-marker${marker === 0 ? " bill-timeline-marker-current" : ""}`} key={marker} />
         ))}
       </div>
-      <p className="bill-timeline-status">Seguimiento pendiente de actualización.</p>
-      <p className="bill-timeline-note">Etapas y fechas por confirmar.</p>
+      <p className="bill-timeline-status">Radicado</p>
+      <p className="bill-timeline-note">Próximas etapas y fechas por confirmar.</p>
     </div>
   );
 }

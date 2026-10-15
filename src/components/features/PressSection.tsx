@@ -7,7 +7,7 @@ export function PressSection() {
       <div className="page-shell">
         <div className="section-heading">
           <div>
-            <h2 id="press-heading" data-motion="lines" aria-label="Prensa"><span className="motion-line"><span className="motion-line-inner"><span>Prensa.</span></span></span></h2>
+            <h2 id="press-heading" data-motion="lines" aria-label="Sala de prensa"><span className="motion-line"><span className="motion-line-inner"><span>Sala de prensa</span></span></span></h2>
             <p>Comunicaciones y recursos para contar nuestra historia.</p>
           </div>
         </div>

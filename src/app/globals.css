@@ -209,7 +209,8 @@ details[open] > summary .expand-icon::after { transform: rotate(0); }
 .bill-timeline-track { display: flex; align-items: center; justify-content: space-between; position: relative; width: 100%; max-width: 340px; margin-bottom: 14px; }
 .bill-timeline-track::before { content: ""; position: absolute; inset-inline: 6px; top: 50%; height: 1px; background: #9a9a9a; }
 .bill-timeline-marker { position: relative; width: 12px; height: 12px; flex-shrink: 0; border: 1px solid #9a9a9a; border-radius: 50%; background: white; }
-.bill-timeline-status { color: var(--muted); font-size: .8125rem; line-height: 1.6; font-weight: 500; }
+.bill-timeline-marker-current { width: 14px; height: 14px; border-color: var(--green); background: var(--green); }
+.bill-timeline-status { color: var(--green); font-size: .8125rem; line-height: 1.6; font-weight: 600; }
 .bill-timeline-note { color: var(--muted); font-size: .75rem; line-height: 1.6; margin-top: 4px; }
 .territory-section { background: var(--green-dark); color: white; position: relative; overflow: clip; }
 .territory-copy { padding-block: 80px; text-align: center; }

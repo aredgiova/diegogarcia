@@ -112,7 +112,7 @@ export function BillsSection() {
                 <div className="bill-progress bill-facts">
                   <div>
                     <h4>¿En qué va el proyecto?</h4>
-                    <p>Información sobre el avance pendiente de actualización.</p>
+                    <p>Proyecto radicado. Seguimiento de las siguientes etapas pendiente de actualización.</p>
                   </div>
                 </div>
                 <p className="document-pending">
@@ -164,7 +164,7 @@ export function BillsSection() {
                 <div className="bill-progress bill-facts">
                   <div>
                     <h4>¿En qué va el proyecto?</h4>
-                    <p>Información sobre el avance pendiente de actualización.</p>
+                    <p>Proyecto radicado. Seguimiento de las siguientes etapas pendiente de actualización.</p>
                   </div>
                 </div>
                 <p className="document-pending">

@@ -17,7 +17,6 @@ export function LegislativeSection() {
               <span className="motion-line"><span className="motion-line-inner">Lo que</span></span>
               <span className="motion-line"><span className="motion-line-inner">nos <span>mueve</span></span></span>
             </h2>
-            <p>Un campo fuerte es una región con más oportunidades.</p>
           </div>
           <a href="#proyectos" className="text-link">Iniciativas legislativas <Icon /></a>
         </div>
