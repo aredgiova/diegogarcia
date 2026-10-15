@@ -19,7 +19,7 @@ export function LegislativeSection() {
             </h2>
             <p>Un campo fuerte es una región con más oportunidades.</p>
           </div>
-          <a href="#proyectos" className="text-link">Conoce mi gestión <Icon /></a>
+          <a href="#proyectos" className="text-link">Iniciativas legislativas <Icon /></a>
         </div>
         <div className="milestone-list">
           {legislativePriorities.map(priority => (

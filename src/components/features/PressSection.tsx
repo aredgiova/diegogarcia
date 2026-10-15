@@ -16,7 +16,6 @@ export function PressSection() {
             <div className="press-kit-photo"><Image src="/images/diego_portrait_2.jpg" alt="Fotografía oficial de Diego García disponible para descargar" fill sizes="(max-width: 800px) 100vw, 40vw" /></div>
             <div className="press-kit-content">
               <h3>Recursos de prensa</h3>
-              <p>Fotografías oficiales, dossier de prensa y biografía.</p>
               <a href="/images/diego_portrait_2.jpg" download="Diego-Garcia-retrato.jpg">Fotografía oficial <span>JPG</span><Icon name="download" /></a>
               <a href="/images/diego_walking.jpg" download="Diego-Garcia-Congreso.jpg">Fotografía en el Congreso <span>JPG</span><Icon name="download" /></a>
               <p className="press-resource-pending">Dossier de prensa <span>Pendiente de publicación</span></p>
